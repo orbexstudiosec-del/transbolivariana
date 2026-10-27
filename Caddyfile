@@ -1,0 +1,10 @@
+{$DOMAIN}, www.{$DOMAIN} {
+	encode zstd gzip
+	reverse_proxy web:3000
+}
+
+# Acceso por IP (http) mientras el DNS apunta al VPS. Se puede quitar después.
+:80 {
+	encode zstd gzip
+	reverse_proxy web:3000
+}

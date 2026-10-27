@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Paleta tomada del logo de Transbolivariana */
+@theme {
+  --color-navy-950: #041a30;
+  --color-navy-900: #062a4d;
+  --color-navy-800: #0a3a68;
+  --color-navy-700: #0d4c86;
+  --color-brand-600: #1668b8;
+  --color-brand-500: #1f7fd6;
+  --color-brand-400: #4aa3ec;
+  --color-brand-100: #e3f0fc;
+  --color-brand-50: #f2f8fe;
+  --color-ink-900: #1c1f24;
+  --color-ink-800: #2a2d33;
+  --color-ink-600: #4b5260;
+  --color-ink-400: #8a92a1;
+  --color-ink-100: #eef0f3;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-montserrat);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink-800);
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1240px;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand-500);
+  &::before {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
