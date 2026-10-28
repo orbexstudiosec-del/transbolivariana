@@ -34,7 +34,7 @@ export function Header() {
         </a>
 
         <nav className="hidden lg:block" aria-label="Principal">
-          <ul className="flex items-center gap-8 font-display text-[15px] font-semibold text-ink-800">
+          <ul className="flex items-center gap-6 font-display xl:gap-7 text-[15px] font-semibold text-ink-800">
             {nav.map((item) => (
               <li key={item.href}>
                 <a href={item.href} className="relative py-2 transition-colors hover:text-brand-500 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-brand-500 after:transition-transform hover:after:scale-x-100">
@@ -49,13 +49,13 @@ export function Header() {
           <a
             href={brochure.href}
             download={brochure.fileName}
-            className="hidden items-center gap-2 rounded-full border-2 border-brand-500 px-5 py-2.5 font-display text-sm font-bold text-brand-500 transition hover:bg-brand-500 hover:text-white md:inline-flex lg:hidden xl:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full border-2 border-brand-500 px-4 py-1.5 font-display text-[13px] font-bold whitespace-nowrap text-brand-500 transition hover:bg-brand-500 hover:text-white md:inline-flex lg:hidden xl:inline-flex"
           >
-            <Download className="size-4" /> Descargar brochure
+            <Download className="size-4" /> Brochure
           </a>
           <a
             href="#cotizar"
-            className="hidden rounded-full bg-brand-500 px-6 py-3 font-display text-sm font-bold text-white transition hover:bg-navy-700 sm:inline-flex"
+            className="hidden rounded-full border-2 border-brand-500 bg-brand-500 px-4 py-1.5 font-display text-[13px] font-bold whitespace-nowrap text-white transition hover:border-navy-700 hover:bg-navy-700 sm:inline-flex"
           >
             Cotizar envío
           </a>
