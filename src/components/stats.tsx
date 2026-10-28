@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { animate, useInView } from "motion/react";
 import { stats } from "@/lib/site";
 
-const fmt = new Intl.NumberFormat("es-BO");
+const fmt = new Intl.NumberFormat("es-EC");
 
 function Counter({ value }: { value: number }) {
   const ref = useRef<HTMLSpanElement>(null);

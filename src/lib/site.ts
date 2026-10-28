@@ -1,5 +1,6 @@
 // Contenido central del sitio. Edita aquí textos, contactos e imágenes.
-// Información tomada de transbolivariana.com (versión anterior del sitio).
+// Información tomada de transbolivariana.com (versión anterior del sitio)
+// y del brief comercial "Presentación todos los servicios 2026".
 
 const img = (name: string) => `/images/${name}.webp`;
 
@@ -9,7 +10,7 @@ export const site = {
   tagline: "Logística en Comercio Exterior",
   since: 1994,
   description:
-    "Depósito Temporal Aduanero (SENAE) y transporte terrestre internacional en la Comunidad Andina desde Tulcán, Ecuador. Logística integral desde 1994.",
+    "Transporte internacional de carga, Depósito Temporal Aduanero (SENAE) y Agencia de Aduanas en Tulcán, Ecuador, a 10 km de Rumichaca. Empresa certificada BASC, logística integral desde 1994.",
   url: "https://transbolivariana.com",
   seo: {
     h1: "Depósito aduanero y transporte internacional · Tulcán, Ecuador",
@@ -47,7 +48,13 @@ export const site = {
   },
 };
 
-export const tel = (phone: string) => `tel:${phone.replace(/[^\d+]/g, "")}`;
+// Brochure comercial descargable (archivo en public/docs).
+export const brochure = {
+  href: "/docs/brochure-transbolivariana-2026.pdf",
+  fileName: "Brochure Transbolivariana 2026.pdf",
+};
+
+export const tel =(phone: string) => `tel:${phone.replace(/[^\d+]/g, "")}`;
 
 export const nav = [
   { label: "Inicio", href: "#inicio" },
@@ -61,21 +68,21 @@ export const nav = [
 export const heroSlides = [
   {
     image: img("rumichaca"),
-    eyebrow: "Transporte terrestre internacional",
-    title: "Cruzamos fronteras en toda la Comunidad Andina",
-    text: "Flota equipada, permisos internacionales para operar en los países de la CAN y rastreo satelital 24/7 en Ecuador, Colombia y Perú.",
+    eyebrow: "Transporte internacional de carga",
+    title: "Conectando Ecuador y Colombia",
+    text: "Con seguridad, eficiencia y confianza. Flota propia, permisos internacionales y rastreo satelital 24/7 en Ecuador, Colombia y Perú.",
   },
   {
     image: img("deposito-montacarga"),
-    eyebrow: "Depósito Temporal Aduanero",
-    title: "Tu carga, en las mejores manos",
-    text: "Habilitados por la Aduana del Ecuador (SENAE), con 3 bodegas monitoreadas y vigiladas las 24 horas en Tulcán.",
+    eyebrow: "Depósito Temporal Aduanero · Autorizado por SENAE",
+    title: "Tu carga en las mejores manos",
+    text: "Infraestructura segura, procesos confiables y operaciones eficientes para tu comercio exterior, a solo 10 km del puente de Rumichaca.",
   },
   {
     image: img("frontera"),
-    eyebrow: `Logística integral desde ${site.since}`,
-    title: "Tu aliado estratégico en comercio exterior",
-    text: "Transporte, almacenamiento y asesoramiento aduanero con propuestas de valor adaptadas a cada cliente.",
+    eyebrow: "Más de 30 años de experiencia",
+    title: "Soluciones integrales de logística y comercio exterior",
+    text: "Transporte internacional, Depósito Temporal Aduanero y Agencia de Aduanas con propuestas de valor adaptadas a cada cliente.",
   },
 ];
 
@@ -95,7 +102,7 @@ export type FeatureIcon =
 
 export const highlights: { icon: FeatureIcon; title: string; text: string }[] = [
   { icon: "badge", title: "Habilitados por SENAE", text: "Depósito Temporal Aduanero autorizado por la Aduana del Ecuador." },
-  { icon: "shield", title: "Certificación BASC", text: "Sistema de Gestión en Control y Seguridad en toda la cadena logística." },
+  { icon: "shield", title: "Certificación BASC", text: "Norma BASC V6-2022, Estándar 6.0.1, alineada con requisitos de seguridad C-TPAT." },
   { icon: "satellite", title: "Rastreo satelital 24/7", text: "Seguimiento en tiempo real del recorrido entre Ecuador, Colombia y Perú." },
 ];
 
@@ -108,13 +115,13 @@ export const services: {
   {
     icon: "warehouse",
     title: "Depósito Temporal Aduanero",
-    text: "3 bodegas monitoreadas para carga fraccionada (paquetes, sacos, tambores, cajas) y unitarizada (paletas y contenedores).",
+    text: "3 bodegas monitoreadas, muelles para carga suelta o paletizada y 2.900 m² de patios para contenedores, plataformas y tanqueros.",
     image: img("deposito-patio"),
   },
   {
     icon: "truck",
-    title: "Transporte Internacional",
-    text: "Caravanas y plataformas con suspensión neumática para cemento, ensacados, cajas, bultos y paletas en la región andina.",
+    title: "Transporte Nacional e Internacional",
+    text: "Flota propia de camiones y tráileres para cemento, ensacados, cajas, bultos, paletas y carga especializada adaptada a cada cliente.",
     image: img("camion"),
   },
   {
@@ -125,8 +132,8 @@ export const services: {
   },
   {
     icon: "customs",
-    title: "Asesoramiento Aduanero",
-    text: "Agentes afianzados en Ecuador, Colombia y Perú para importación, exportación y regímenes especiales.",
+    title: "Agencia de Aduanas",
+    text: "Agente de aduana propio para importaciones, exportaciones, regímenes especiales, coordinación de aforos y gestión documental.",
     image: img("aduana"),
   },
   {
@@ -164,9 +171,13 @@ export const infrastructure: {
   },
   {
     title: "Carga vigilada 24 horas",
-    text: "Sistema integrado de seguridad para monitorear tu carga en todo momento.",
+    text: "Vigilancia de tu carga e instalaciones las 24 horas, los 7 días de la semana.",
     image: img("camaras"),
-    points: ["Circuito cerrado de televisión", "Software y herramientas informáticas"],
+    points: [
+      "Sensores y circuito cerrado de televisión",
+      "Cercado eléctrico e iluminación perimetral",
+      "Control de accesos y seguridad privada",
+    ],
   },
   {
     title: "Flota con rastreo satelital",
@@ -181,23 +192,23 @@ export const about = {
   image: img("fachada"),
   imageSecondary: img("equipo"),
   intro:
-    "Somos el grupo empresarial en comercio exterior que brinda el servicio de Depósito Temporal, Transporte Terrestre Internacional de mercancías y asesoramiento logístico, con el objetivo de prestar un servicio de calidad que abarca una «Logística Integral», configurando propuestas de valor adaptadas para cada cliente dentro del área subregional andina.",
+    "Somos una empresa de comercio exterior que brinda el servicio de transporte nacional e internacional de carga vía terrestre, y posee su propio Depósito Temporal Aduanero y Agencia de Aduanas. Nuestro objetivo es prestar un servicio de calidad que abarque una «Logística Integral», configurando propuestas de valor adaptadas para cada cliente dentro del área subregional andina.",
   points: [
     "Depósito habilitado por la SENAE",
-    "Permisos internacionales en la CAN",
-    "Vigilancia y rastreo 24/7",
-    "Equipo profesional y capacitado",
+    "Agencia de Aduanas propia",
+    "Flota de camiones propia",
+    "Certificados BASC V6-2022",
   ],
   mission:
     "Somos una empresa que contribuye con el comercio exterior, moderna, innovadora y eficaz, que brinda el servicio de almacenamiento, distribución, asesoramiento logístico y aduanero, para todos los tipos de bienes a nivel nacional e internacional.",
   vision:
-    "Ser referencia a nivel nacional en el servicio de Depósito Aduanero y Transporte Internacional, trabajar con calidad, eficiencia y rapidez, superando las expectativas de nuestros clientes nacionales y extranjeros con herramientas informáticas, tarifas competitivas en un ambiente laboral solidario, capacitado y productivo.",
+    "Liderar nuestros servicios con calidad, eficiencia y rapidez, superando las expectativas de nuestros clientes nacionales y extranjeros con herramientas informáticas, tarifas competitivas en un ambiente laboral solidario, capacitado y productivo.",
 };
 
 export const stats = [
   { value: 30, suffix: "+", label: "Años de experiencia" },
   { value: 3, suffix: "", label: "Bodegas monitoreadas" },
-  { value: 11000, suffix: "", label: "Galones por tanquero" },
+  { value: 2900, suffix: " m²", label: "De patios de almacenaje" },
   { value: 24, suffix: "/7", label: "Vigilancia y rastreo" },
 ];
 
@@ -208,7 +219,7 @@ export const steps = [
   },
   {
     title: "Documentación",
-    text: "Nuestros agentes afianzados gestionan los trámites aduaneros.",
+    text: "Nuestra Agencia de Aduanas gestiona los trámites y aforos.",
   },
   {
     title: "Transporte",
@@ -221,10 +232,18 @@ export const steps = [
 ];
 
 export const countries = [
-  { name: "Ecuador", note: "Sede central · Tulcán, frontera Rumichaca" },
-  { name: "Colombia", note: "Agentes afianzados · Rastreo satelital" },
-  { name: "Perú", note: "Agentes afianzados · Rastreo satelital" },
-  { name: "Bolivia", note: "Permisos de operación CAN" },
+  { name: "Ecuador", note: "Sede central · Tulcán" },
+  { name: "Colombia", note: "Cruce de frontera · Rastreo satelital" },
+  { name: "Perú", note: "Rutas CAN · Rastreo satelital" },
+  { name: "Rumichaca", note: "A 10 km (15 min) de nuestras instalaciones" },
+];
+
+// Tipos de unidad y peso máximo aproximado (brief 2026).
+export const fleet = [
+  { name: "Camión turbo", capacity: "5.000 kg" },
+  { name: "Camión sencillo", capacity: "8.500 kg" },
+  { name: "Low boy", capacity: "10.000 kg" },
+  { name: "Tráiler", capacity: "31.000 kg" },
 ];
 
 export const values: { icon: FeatureIcon; title: string; text: string }[] = [
@@ -236,6 +255,8 @@ export const values: { icon: FeatureIcon; title: string; text: string }[] = [
 
 export const basc = {
   title: "Política SGCS BASC",
+  certificate:
+    "Certificación BASC Nº ECUUIO00562-1-3 · Norma V6-2022, Estándar 6.0.1 · Vigente hasta junio de 2027",
   text: "Transbolivariana, organización de Comercio Exterior, provee servicios de almacenamiento de mercancías de importación y exportación, comprometida con la implementación, operación y mejoramiento continuo de sus procesos, en especial del SGCS BASC, con condiciones seguras para sus clientes internos y externos, cumpliendo con los requisitos legales y reglamentarios, promoviendo la seguridad en el uso de tecnologías de la información y previniendo cualquier tipo de actividad ilícita, corrupción, soborno o lavado de activos en la cadena logística.",
 };
 

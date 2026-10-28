@@ -27,7 +27,7 @@ export function JsonLd() {
             "@type": "ContactPoint",
             telephone: intl(contact.mobile),
             contactType: "customer service",
-            areaServed: ["EC", "CO", "PE", "BO"],
+            areaServed: ["EC", "CO", "PE"],
             availableLanguage: "Spanish",
           },
         ],
@@ -55,7 +55,6 @@ export function JsonLd() {
           { "@type": "Country", name: "Ecuador" },
           { "@type": "Country", name: "Colombia" },
           { "@type": "Country", name: "Perú" },
-          { "@type": "Country", name: "Bolivia" },
         ],
         openingHoursSpecification: [
           {

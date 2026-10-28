@@ -4,6 +4,7 @@ import {
   about,
   basc,
   countries,
+  fleet,
   highlights,
   infrastructure,
   partners,
@@ -164,6 +165,28 @@ export function Services() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-14">
+          <div className="rounded-2xl bg-white p-7 shadow-sm sm:p-8">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 className="font-display text-xl font-bold text-navy-900">Tipo de flota</h3>
+              <p className="text-sm text-ink-400">Peso máximo aproximado por unidad</p>
+            </div>
+            <ul className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+              {fleet.map((f) => (
+                <li key={f.name} className="flex items-center gap-4 rounded-xl border border-ink-100 p-4">
+                  <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-500">
+                    <FeatureGlyph name="truck" className="size-6" />
+                  </span>
+                  <div>
+                    <div className="font-display font-bold text-navy-900">{f.name}</div>
+                    <div className="text-sm text-ink-600">{f.capacity}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -243,7 +266,7 @@ export function Coverage() {
           light
           eyebrow="Cobertura"
           title="Conectamos Ecuador con la Comunidad Andina"
-          text="Desde Tulcán, junto al puente internacional de Rumichaca, operamos con todos los permisos internacionales para transportar carga entre los países de la CAN."
+          text="Desde Tulcán, a 10 km del puente internacional de Rumichaca, cubrimos las principales rutas de la Comunidad Andina con flota propia y todos los permisos internacionales."
         />
         <div className="grid gap-4 sm:grid-cols-2">
           {countries.map((c, i) => (
@@ -292,6 +315,7 @@ export function Values() {
             <div>
               <h3 className="font-display text-xl font-bold text-navy-900">{basc.title}</h3>
               <p className="mt-3 text-ink-600">{basc.text}</p>
+              <p className="mt-4 text-sm font-semibold text-brand-500">{basc.certificate}</p>
             </div>
           </div>
         </Reveal>

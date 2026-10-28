@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Menu, Phone, X } from "lucide-react";
-import { nav, site, tel } from "@/lib/site";
+import { Download, Menu, Phone, X } from "lucide-react";
+import { brochure, nav, site, tel } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -46,6 +46,13 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <a
+            href={brochure.href}
+            download={brochure.fileName}
+            className="hidden items-center gap-2 rounded-full border-2 border-brand-500 px-5 py-2.5 font-display text-sm font-bold text-brand-500 transition hover:bg-brand-500 hover:text-white md:inline-flex lg:hidden xl:inline-flex"
+          >
+            <Download className="size-4" /> Descargar brochure
+          </a>
           <a
             href="#cotizar"
             className="hidden rounded-full bg-brand-500 px-6 py-3 font-display text-sm font-bold text-white transition hover:bg-navy-700 sm:inline-flex"
@@ -99,6 +106,16 @@ export function Header() {
                   className="block rounded-full bg-brand-500 py-3 text-center text-white"
                 >
                   Cotizar envío
+                </a>
+              </li>
+              <li className="pt-3">
+                <a
+                  href={brochure.href}
+                  download={brochure.fileName}
+                  onClick={() => setOpen(false)}
+                  className="flex items-center justify-center gap-2 rounded-full border-2 border-brand-500 py-2.5 text-brand-500"
+                >
+                  <Download className="size-4" /> Descargar brochure
                 </a>
               </li>
             </ul>
