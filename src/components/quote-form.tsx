@@ -50,7 +50,7 @@ export function QuoteForm() {
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 font-display font-bold text-white transition hover:bg-navy-700 disabled:opacity-60"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-8 py-4 font-display sm:w-auto font-bold text-white transition hover:bg-navy-700 disabled:opacity-60"
         >
           {pending ? <LoaderCircle className="size-5 animate-spin" /> : <Send className="size-5" />}
           {pending ? "Enviando…" : "Enviar consulta"}
@@ -62,7 +62,7 @@ export function QuoteForm() {
 }
 
 function inputCls(error?: string) {
-  return `w-full rounded-xl border bg-ink-100/50 px-4 py-3.5 text-ink-900 outline-none transition placeholder:text-ink-400 focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100 ${error ? "border-red-400" : "border-ink-100"}`;
+  return `w-full rounded-xl border bg-ink-100/50 px-4 py-3 text-base text-ink-900 sm:py-3.5 outline-none transition placeholder:text-ink-400 focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100 ${error ? "border-red-400" : "border-ink-100"}`;
 }
 
 function Field({

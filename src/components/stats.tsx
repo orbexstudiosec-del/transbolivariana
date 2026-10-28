@@ -31,13 +31,13 @@ export function Stats() {
         {stats.map((s, i) => (
           <div
             key={s.label}
-            className={`px-4 py-12 text-center ${i % 2 ? "border-l border-white/10" : ""} ${i >= 2 ? "border-t border-white/10 lg:border-t-0" : ""} lg:border-l lg:first:border-l-0`}
+            className={`px-3 py-8 text-center sm:px-4 sm:py-12 ${i % 2 ? "border-l border-white/10" : ""} ${i >= 2 ? "border-t border-white/10 lg:border-t-0" : ""} lg:border-l lg:first:border-l-0`}
           >
-            <div className="font-display text-4xl font-extrabold sm:text-5xl">
+            <div className="font-display text-3xl font-extrabold whitespace-nowrap sm:text-5xl">
               <Counter value={s.value} />
               <span className="text-brand-400">{s.suffix}</span>
             </div>
-            <div className="mt-2 text-sm font-medium tracking-wide text-white/70 uppercase">{s.label}</div>
+            <div className="mt-2 text-xs font-medium tracking-wide text-white/70 uppercase sm:text-sm">{s.label}</div>
           </div>
         ))}
       </div>

@@ -115,7 +115,7 @@ export const services: {
   {
     icon: "warehouse",
     title: "Depósito Temporal Aduanero",
-    text: "3 bodegas monitoreadas, muelles para carga suelta o paletizada y 2.900 m² de patios para contenedores, plataformas y tanqueros.",
+    text: "3 bodegas monitoreadas, muelles para carga suelta o paletizada y 2.900 m² de patios para contenedores, plataformas y tanqueros.",
     image: img("deposito-patio"),
   },
   {
