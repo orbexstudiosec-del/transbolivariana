@@ -102,8 +102,52 @@ body {
   }
 }
 
+/* Camión del slider: recorre la carretera durante cada diapositiva */
+@keyframes truck-drive {
+  0% { transform: translateX(0); opacity: 0; }
+  5%, 94% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+@keyframes road-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes wheel-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes truck-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-0.6px); }
+}
+@keyframes exhaust {
+  0% { transform: translate(0, 0) scale(0.4); opacity: 0.7; }
+  100% { transform: translate(-14px, -8px) scale(1.4); opacity: 0; }
+}
+.truck-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wheel-spin 0.6s linear infinite;
+}
+.truck-body {
+  animation: truck-bounce 0.35s ease-in-out infinite;
+}
+.truck-smoke {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: exhaust 1.2s ease-out infinite;
+}
+.truck-paused,
+.truck-paused * {
+  animation-play-state: paused !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .truck-wheel,
+  .truck-body,
+  .truck-smoke {
+    animation: none;
   }
 }

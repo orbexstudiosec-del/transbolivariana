@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { heroSlides, site } from "@/lib/site";
+import { TruckRoad } from "./truck-road";
 
 const INTERVAL = 7000;
 
@@ -13,13 +14,8 @@ export function Hero() {
   const [paused, setPaused] = useState(false);
   const count = heroSlides.length;
 
+  // El cambio automático lo dispara el camión al llegar al final de la carretera
   const go = useCallback((dir: number) => setIndex((i) => (i + dir + count) % count), [count]);
-
-  useEffect(() => {
-    if (paused) return;
-    const id = setTimeout(() => go(1), INTERVAL);
-    return () => clearTimeout(id);
-  }, [index, paused, go]);
 
   const slide = heroSlides[index];
   const touchX = useRef<number | null>(null);
@@ -105,6 +101,9 @@ export function Hero() {
                 className={`h-1.5 rounded-full transition-all ${i === index ? "w-10 bg-brand-400" : "w-5 bg-white/40 hover:bg-white/70"}`}
               />
             ))}
+          </div>
+          <div className="mx-4 flex flex-1 sm:mx-8">
+            <TruckRoad key={index} duration={INTERVAL} paused={paused} onArrive={() => go(1)} />
           </div>
           <div className="hidden gap-2 sm:flex">
             <button type="button" onClick={() => go(-1)} aria-label="Anterior" className="grid size-12 place-items-center rounded-full border border-white/30 transition hover:bg-white hover:text-navy-900">
