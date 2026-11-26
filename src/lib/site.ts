@@ -195,7 +195,7 @@ export const infrastructure: {
 ];
 
 export const about = {
-  image: img("fachada"),
+  image: img("nosotros"),
   imageSecondary: img("equipo-cliente"),
   intro:
     "Somos una empresa de comercio exterior que brinda el servicio de transporte nacional e internacional de carga vía terrestre, y posee su propio Depósito Temporal Aduanero y Agencia de Aduanas. Nuestro objetivo es prestar un servicio de calidad que abarque una «Logística Integral», configurando propuestas de valor adaptadas para cada cliente dentro del área subregional andina.",
