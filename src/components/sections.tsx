@@ -77,7 +77,7 @@ export function About() {
       <div className="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal className="relative pr-6 pb-6 sm:pr-16 sm:pb-16">
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl sm:aspect-[4/5]">
-            <Image src={about.image} alt={`Personal de ${site.legalName} en Tulcán`} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover object-[50%_15%]" />
+            <Image src={about.image} alt={`Estibadores de ${site.legalName} descargando un camión`} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover object-[50%_22%]" />
           </div>
           <div className="absolute right-0 bottom-0 hidden aspect-[4/3] w-3/5 overflow-hidden rounded-3xl border-8 border-white sm:block">
             <Image src={about.imageSecondary} alt={`Equipo de ${site.name}`} fill sizes="30vw" className="object-cover" />

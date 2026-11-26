@@ -199,7 +199,7 @@ export const infrastructure: {
 ];
 
 export const about = {
-  image: img("nosotros"),
+  image: img("nosotros-carga"),
   imageSecondary: img("equipo-cliente"),
   intro:
     "Somos una empresa de comercio exterior que brinda el servicio de transporte nacional e internacional de carga vía terrestre, y posee su propio Depósito Temporal Aduanero y Agencia de Aduanas. Nuestro objetivo es prestar un servicio de calidad que abarque una «Logística Integral», configurando propuestas de valor adaptadas para cada cliente dentro del área subregional andina.",
@@ -274,7 +274,7 @@ export const quoteBg = img("bodega");
 
 // Galería "Nuestro equipo" (sesión fotográfica 2026). `wide` ocupa dos columnas y `tall` dos filas.
 export const gallery: { image: string; alt: string; wide?: boolean; tall?: boolean }[] = [
-  { image: img("galeria-carga-camion"), alt: "Estibadores descargando cajas de un camión", tall: true },
+  { image: img("galeria-revision"), alt: "Revisión de guías de despacho en bodega", tall: true },
   { image: img("galeria-sacos"), alt: "Manipulación de sacos en bodega", wide: true },
   { image: img("galeria-radio"), alt: "Coordinación de operaciones por radio" },
   { image: img("galeria-uniforme"), alt: "Uniforme corporativo de Transbolivariana" },
