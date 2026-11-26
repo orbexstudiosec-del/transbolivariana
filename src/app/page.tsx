@@ -10,7 +10,6 @@ import {
   Gallery,
   Highlights,
   Infrastructure,
-  Partners,
   Process,
   Services,
   Values,
@@ -36,7 +35,6 @@ export default function Home() {
         <Coverage />
         <Values />
         <Gallery />
-        <Partners />
         <CallToAction />
         <Tracking />
         <QuoteSection />

@@ -67,22 +67,28 @@ export const nav = [
 
 export const heroSlides = [
   {
-    image: img("rumichaca"),
+    image: img("hero-carga"),
     eyebrow: "Transporte internacional de carga",
     title: "Conectando Ecuador y Colombia",
     text: "Con seguridad, eficiencia y confianza. Flota propia, permisos internacionales y rastreo satelital 24/7 en Ecuador, Colombia y Perú.",
   },
   {
-    image: img("deposito-montacarga"),
+    image: img("hero-operaciones"),
     eyebrow: "Depósito Temporal Aduanero · Autorizado por SENAE",
     title: "Tu carga en las mejores manos",
     text: "Infraestructura segura, procesos confiables y operaciones eficientes para tu comercio exterior, a solo 10 km del puente de Rumichaca.",
   },
   {
-    image: img("frontera"),
+    image: img("hero-experiencia"),
     eyebrow: "Más de 30 años de experiencia",
     title: "Soluciones integrales de logística y comercio exterior",
     text: "Transporte internacional, Depósito Temporal Aduanero y Agencia de Aduanas con propuestas de valor adaptadas a cada cliente.",
+  },
+  {
+    image: img("hero-asesoria"),
+    eyebrow: "Agencia de Aduanas propia · Certificación BASC",
+    title: "Asesoría aduanera a tu medida",
+    text: "Gestionamos importaciones, exportaciones, aforos y documentación con personal capacitado que acompaña tu operación de principio a fin.",
   },
 ];
 
@@ -259,18 +265,6 @@ export const basc = {
     "Certificación BASC Nº ECUUIO00562-1-3 · Norma V6-2022, Estándar 6.0.1 · Vigente hasta junio de 2027",
   text: "Transbolivariana, organización de Comercio Exterior, provee servicios de almacenamiento de mercancías de importación y exportación, comprometida con la implementación, operación y mejoramiento continuo de sus procesos, en especial del SGCS BASC, con condiciones seguras para sus clientes internos y externos, cumpliendo con los requisitos legales y reglamentarios, promoviendo la seguridad en el uso de tecnologías de la información y previniendo cualquier tipo de actividad ilícita, corrupción, soborno o lavado de activos en la cadena logística.",
 };
-
-export const partners = [
-  { name: "Grupo Mavesa", logo: "/partners/mavesa.webp" },
-  { name: "Apolo Seven S.A.", logo: "/partners/apolo-seven.webp" },
-  { name: "Grupo Familia", logo: "/partners/grupo-familia.webp" },
-  { name: "Infri Cía. Ltda.", logo: "/partners/infri.webp" },
-  { name: "FV", logo: "/partners/fv.webp" },
-  { name: "Manuelita", logo: "/partners/manuelita.webp" },
-  { name: "Kimberly-Clark", logo: "/partners/kimberly-clark.webp" },
-  { name: "Si Logística", logo: "/partners/si-logistica.webp" },
-  { name: "Translogex S.A.S.", logo: "/partners/translogex.webp" },
-];
 
 export const quoteBg = img("bodega");
 

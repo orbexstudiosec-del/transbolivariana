@@ -8,7 +8,6 @@ import {
   gallery,
   highlights,
   infrastructure,
-  partners,
   services,
   site,
   steps,
@@ -380,29 +379,6 @@ export function Gallery() {
             ))}
           </div>
         </Reveal>
-      </div>
-    </section>
-  );
-}
-
-export function Partners() {
-  return (
-    <section className="border-y border-ink-100 py-12 sm:py-16">
-      <div className="container-x">
-        <p className="text-center font-display text-xs font-bold tracking-[0.18em] text-ink-400 uppercase sm:text-sm">Socios estratégicos</p>
-        <ul className="mt-8 grid grid-cols-3 items-center gap-x-6 gap-y-8 sm:mt-10 sm:grid-cols-5 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-9">
-          {partners.map((p) => (
-            <li key={p.name} className="flex justify-center">
-              <Image
-                src={p.logo}
-                alt={p.name}
-                width={160}
-                height={100}
-                className="h-11 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 sm:h-14"
-              />
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
