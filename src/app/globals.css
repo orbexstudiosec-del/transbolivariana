@@ -136,6 +136,20 @@ body {
   transform-origin: center;
   animation: exhaust 1.2s ease-out infinite;
 }
+@keyframes speed-line {
+  0% { transform: translateX(6px); opacity: 0; }
+  30% { opacity: 0.5; }
+  100% { transform: translateX(-14px); opacity: 0; }
+}
+.truck-speed {
+  animation: speed-line 0.7s linear infinite;
+}
+/* El pin de destino se enciende y salta cuando llega el camión */
+@keyframes pin-arrive {
+  0%, 88% { color: rgb(255 255 255 / 0.45); transform: none; }
+  94% { color: #3b97e8; transform: translateY(-5px) scale(1.15); }
+  100% { color: #3b97e8; transform: none; }
+}
 .truck-paused,
 .truck-paused * {
   animation-play-state: paused !important;
@@ -147,7 +161,8 @@ body {
   }
   .truck-wheel,
   .truck-body,
-  .truck-smoke {
+  .truck-smoke,
+  .truck-speed {
     animation: none;
   }
 }
