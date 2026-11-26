@@ -7,6 +7,7 @@ import {
   About,
   CallToAction,
   Coverage,
+  Gallery,
   Highlights,
   Infrastructure,
   Partners,
@@ -34,6 +35,7 @@ export default function Home() {
         <Process />
         <Coverage />
         <Values />
+        <Gallery />
         <Partners />
         <CallToAction />
         <Tracking />

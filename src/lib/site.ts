@@ -116,7 +116,7 @@ export const services: {
     icon: "warehouse",
     title: "Depósito Temporal Aduanero",
     text: "3 bodegas monitoreadas, muelles para carga suelta o paletizada y 2.900 m² de patios para contenedores, plataformas y tanqueros.",
-    image: img("deposito-patio"),
+    image: img("deposito-bodega"),
   },
   {
     icon: "truck",
@@ -134,13 +134,13 @@ export const services: {
     icon: "customs",
     title: "Agencia de Aduanas",
     text: "Agente de aduana propio para importaciones, exportaciones, regímenes especiales, coordinación de aforos y gestión documental.",
-    image: img("aduana"),
+    image: img("agencia-aduanas"),
   },
   {
     icon: "forklift",
     title: "Estibaje y Montacargas",
     text: "Personal capacitado y dos montacargas para cargar y descargar mercadería paletizada de forma rápida y segura.",
-    image: img("estibaje"),
+    image: img("estibaje-sacos"),
   },
   {
     icon: "scale",
@@ -190,7 +190,7 @@ export const infrastructure: {
 
 export const about = {
   image: img("fachada"),
-  imageSecondary: img("equipo"),
+  imageSecondary: img("equipo-cliente"),
   intro:
     "Somos una empresa de comercio exterior que brinda el servicio de transporte nacional e internacional de carga vía terrestre, y posee su propio Depósito Temporal Aduanero y Agencia de Aduanas. Nuestro objetivo es prestar un servicio de calidad que abarque una «Logística Integral», configurando propuestas de valor adaptadas para cada cliente dentro del área subregional andina.",
   points: [
@@ -273,3 +273,17 @@ export const partners = [
 ];
 
 export const quoteBg = img("bodega");
+
+// Galería "Nuestro equipo" (sesión fotográfica 2026). `wide` ocupa dos columnas y `tall` dos filas.
+export const gallery: { image: string; alt: string; wide?: boolean; tall?: boolean }[] = [
+  { image: img("galeria-carga-camion"), alt: "Estibadores descargando cajas de un camión", tall: true },
+  { image: img("galeria-sacos"), alt: "Manipulación de sacos en bodega", wide: true },
+  { image: img("galeria-radio"), alt: "Coordinación de operaciones por radio" },
+  { image: img("galeria-uniforme"), alt: "Uniforme corporativo de Transbolivariana" },
+  { image: img("galeria-oficina"), alt: "Personal administrativo en las oficinas de Tulcán", wide: true },
+  { image: img("galeria-bodega-equipo"), alt: "Equipo de bodega con equipo de protección", wide: true },
+  { image: img("galeria-equipo-oficina"), alt: "Equipo de operaciones aduaneras" },
+  { image: img("galeria-bodega"), alt: "Operario en el área de almacenamiento", tall: true },
+  { image: img("galeria-control"), alt: "Verificación de etiquetas de la carga almacenada" },
+  { image: img("galeria-rollos"), alt: "Revisión de mercadería paletizada", wide: true },
+];

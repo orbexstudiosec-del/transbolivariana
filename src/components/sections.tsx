@@ -5,6 +5,7 @@ import {
   basc,
   countries,
   fleet,
+  gallery,
   highlights,
   infrastructure,
   partners,
@@ -344,6 +345,39 @@ export function Values() {
                 ))}
               </ul>
             </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+export function Gallery() {
+  return (
+    <section id="equipo" className="section-y bg-brand-50">
+      <div className="container-x">
+        <SectionHeading
+          center
+          eyebrow="Nuestro equipo"
+          title="Personas que cuidan tu carga"
+          text="Personal capacitado y certificado BASC en oficinas, bodegas y patios, trabajando cada día para que tu mercadería llegue segura a su destino."
+        />
+        <Reveal className="mt-10 sm:mt-14">
+          <div className="grid auto-rows-[9rem] grid-flow-dense grid-cols-2 gap-3 sm:auto-rows-[13rem] sm:gap-4 lg:grid-cols-4 lg:auto-rows-[15rem]">
+            {gallery.map((g) => (
+              <figure
+                key={g.image}
+                className={`group relative overflow-hidden rounded-2xl ${g.wide ? "col-span-2" : ""} ${g.tall ? "row-span-2" : ""}`}
+              >
+                <Image
+                  src={g.image}
+                  alt={g.alt}
+                  fill
+                  sizes={g.wide ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, 50vw"}
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+              </figure>
+            ))}
           </div>
         </Reveal>
       </div>
