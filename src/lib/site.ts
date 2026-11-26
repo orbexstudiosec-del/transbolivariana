@@ -68,24 +68,28 @@ export const nav = [
 export const heroSlides = [
   {
     image: img("hero-carga"),
+    position: "65% center",
     eyebrow: "Transporte internacional de carga",
     title: "Conectando Ecuador y Colombia",
     text: "Con seguridad, eficiencia y confianza. Flota propia, permisos internacionales y rastreo satelital 24/7 en Ecuador, Colombia y Perú.",
   },
   {
     image: img("hero-operaciones"),
+    position: "60% center",
     eyebrow: "Depósito Temporal Aduanero · Autorizado por SENAE",
     title: "Tu carga en las mejores manos",
     text: "Infraestructura segura, procesos confiables y operaciones eficientes para tu comercio exterior, a solo 10 km del puente de Rumichaca.",
   },
   {
     image: img("hero-experiencia"),
+    position: "55% center",
     eyebrow: "Más de 30 años de experiencia",
     title: "Soluciones integrales de logística y comercio exterior",
     text: "Transporte internacional, Depósito Temporal Aduanero y Agencia de Aduanas con propuestas de valor adaptadas a cada cliente.",
   },
   {
     image: img("hero-asesoria"),
+    position: "88% center",
     eyebrow: "Agencia de Aduanas propia · Certificación BASC",
     title: "Asesoría aduanera a tu medida",
     text: "Gestionamos importaciones, exportaciones, aforos y documentación con personal capacitado que acompaña tu operación de principio a fin.",

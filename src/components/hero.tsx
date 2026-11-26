@@ -38,16 +38,17 @@ export function Hero() {
       <AnimatePresence initial={false}>
         <motion.div
           key={index}
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 lg:left-[52%] xl:left-[45%]"
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ opacity: { duration: 1 }, scale: { duration: INTERVAL / 1000 + 1, ease: "linear" } }}
         >
-          <Image src={slide.image} alt="" fill priority={index === 0} sizes="100vw" className="object-cover" />
+          <Image src={slide.image} alt="" fill priority={index === 0} sizes="(min-width: 1024px) 55vw, 100vw" style={{ objectPosition: slide.position }} className="object-cover" />
         </motion.div>
       </AnimatePresence>
-      <div className="absolute inset-0 -z-10 bg-linear-to-t from-navy-950/95 via-navy-900/80 to-navy-900/50 sm:bg-linear-to-r sm:from-navy-950/95 sm:via-navy-900/75 sm:to-navy-900/20" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-t from-navy-950/95 via-navy-900/80 to-navy-900/50 sm:bg-linear-to-r sm:from-navy-950/95 sm:via-navy-900/75 sm:to-navy-900/20 lg:from-navy-950 lg:from-[52%] lg:via-navy-950/30 lg:via-[64%] lg:to-transparent lg:to-[78%] xl:from-[45%] xl:via-[58%] xl:to-[70%]" />
+      {/* En pantallas anchas la foto ocupa solo la derecha para que el texto no tape las caras */}
       {/* Flechas del logo como motivo decorativo */}
       <svg className="absolute -right-24 bottom-0 -z-10 hidden h-[520px] opacity-15 lg:block" viewBox="0 0 200 200" aria-hidden>
         <path d="M30 100 L110 92 L110 78 L150 104 L110 128 L110 114 L30 112 Z" fill="#1f7fd6" />
