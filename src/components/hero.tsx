@@ -11,7 +11,6 @@ const INTERVAL = 7000;
 
 export function Hero() {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   const count = heroSlides.length;
 
   // El cambio automático lo dispara el camión al llegar al final de la carretera
@@ -24,8 +23,6 @@ export function Hero() {
     <section
       id="inicio"
       className="relative isolate flex min-h-[560px] items-center overflow-hidden bg-navy-950 text-white sm:min-h-[620px] lg:min-h-[720px]"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
       onTouchEnd={(e) => {
         if (touchX.current === null) return;
@@ -104,7 +101,7 @@ export function Hero() {
             ))}
           </div>
           <div className="mx-4 flex flex-1 sm:mx-8">
-            <TruckRoad key={index} duration={INTERVAL} paused={paused} onArrive={() => go(1)} />
+            <TruckRoad key={index} duration={INTERVAL} onArrive={() => go(1)} />
           </div>
           <div className="hidden gap-2 sm:flex">
             <button type="button" onClick={() => go(-1)} aria-label="Anterior" className="grid size-12 place-items-center rounded-full border border-white/30 transition hover:bg-white hover:text-navy-900">

@@ -2,9 +2,9 @@
  * Carretera con un camión que la recorre durante cada diapositiva del slider.
  * Hace de barra de progreso: al terminar el recorrido llama a `onArrive`.
  */
-export function TruckRoad({ duration, paused, onArrive }: { duration: number; paused: boolean; onArrive: () => void }) {
+export function TruckRoad({ duration, onArrive }: { duration: number; onArrive: () => void }) {
   return (
-    <div className={`relative h-14 flex-1 sm:h-16 ${paused ? "truck-paused" : ""}`} aria-hidden>
+    <div className="relative h-14 flex-1 sm:h-16" aria-hidden>
       {/* Asfalto con línea central y el tramo ya recorrido */}
       <div className="absolute inset-x-0 bottom-0 h-2.5 overflow-hidden rounded-full bg-white/10 ring-1 ring-white/10 sm:h-3">
         <div
